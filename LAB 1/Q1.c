@@ -82,9 +82,9 @@ void displayAvgOverTheRange(int exp[][12], int size){
 
 
 int main(){
-    int size=4;
     int startYear;
-    printf("\nPlease enter the start year for your data: ");
+    int size=4;
+    printf("\nPlease enter the start year: ");
     scanf("%d", &startYear);
     printf("\nPlease enter the number of years: ");
     scanf("%d", &size);
@@ -93,7 +93,7 @@ int main(){
     // Taking user input:
     for(int i = 0; i<size; i++){
         for(int j = 0; j<12; j++){
-            printf("%d %d: ", i, j);
+            printf("%d-%d: ", startYear+i, j+1);
             scanf("%d", &exp[i][j]);
         }
     }
@@ -102,4 +102,6 @@ int main(){
     displayMonthlyAvg(exp, size);
     displayYearlyAvg(exp, size);
     displayAvgOverTheRange(exp, size);
+
+    return 0;
 }
