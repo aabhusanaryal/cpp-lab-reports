@@ -1,23 +1,22 @@
 // 3. Store and retrieve the name of the students and obtained marks in c programming in 1st semester using structure.
-#include <stdio.h>
-#include <string.h>
-
-struct Result{
-        char name[50];
-        int marks;
-}st1, st2, st3, st4, st5;
-
-int main(){
-    int nos;
-    printf("Enter the number of students: ");
-    scanf("%d", &nos);
-
-    struct Result student1;
-    strcpy(student1.name, "Prabigay");
-    student1.marks = 10;
-
-    printf("Result:\nStudent's Name:\tMarks:\n%s\t%d", student1.name, student1.marks);
-    
-    
+#include<stdio.h>
+struct Student {
+    int marks;
+    char name[50];
+};
+int main() {
+    struct Student stu[5];
+    int i;
+    for (i = 0; i < 5; i++) {
+        printf("Enter the name of student %i:\n",i+1);
+        scanf("%s", stu[i].name);
+        printf("Enter the marks obtained by student %i:\n",i+1);
+        scanf("%d", &stu[i].marks);
+    }
+    printf("Name\t|\tMarks\n");
+    printf("--------|--------");
+    for (i = 0; i < 5; i++) {
+        printf("\n%s\t|\t%i", stu[i].name, stu[i].marks);
+    }
     return 0;
 }
