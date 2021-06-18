@@ -11,8 +11,9 @@ float feet_to_inch(float feet){
     inch=feet*12.0f;
     return inch;
 }
-float feet_to_inch(float feet,float inch){
-    return inch;
+float feet_to_inch(float feet,float& inch){
+    inch=12.0f*feet;
+    return 0;
 }
 
 int  main(){
@@ -21,6 +22,8 @@ int  main(){
     std::cout<<"Function 2:\n";
     std::cout<<feet_to_inch(5)<<std::endl;
     std::cout<<"Function 3:\n";
-    std::cout<<feet_to_inch(5,5*12.0f);
+    float inch=0;
+    feet_to_inch(5,inch);
+    std::cout<<inch;
     return 0;
 }
