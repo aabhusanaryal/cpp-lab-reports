@@ -32,5 +32,6 @@ int main(){
         emp[i].displayreport();
     }
 
+    delete[] emp;
     return 0;
 }
