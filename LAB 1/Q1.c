@@ -41,6 +41,7 @@ int main()
 	printf("\nYearly average\n");
 	printf("Year\t\tAverage\n");
 	float* yearly_average = malloc(range * sizeof(*yearly_average));
+	memset(yearly_average, 0, range * sizeof(*yearly_average));
 	for(int i = 0; i < range; i++)
 	{
 		for(int j = 0; j < 12; j++)
