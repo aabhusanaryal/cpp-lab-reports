@@ -19,7 +19,7 @@ class Date{
         void display(){
             std::cout<<dd<<"/"<<mm<<"/"<<yy<<std::endl;
         }
-        Date operator++(){
+        Date& operator++(){
             ++dd;
             if(dd>28)
                 setDate();
@@ -27,9 +27,7 @@ class Date{
         } 
         Date operator++(int){
             Date temp= *this;
-            dd++;
-            if(dd>28)
-                setDate();
+            ++(*this);
             return temp;
         }
         void setDate(){
@@ -77,6 +75,6 @@ int main(){
     (one++).display();
     one.display();
     (++one).display();
-    (++one).display();
+    (++++one).display();
     return 0;
 }

@@ -3,7 +3,7 @@ class points{
     private:
        float x,y,z;
     public:
-    points(float a,float b,float c):x(a),y(b),z(c){}
+        points(float a,float b,float c):x(a),y(b),z(c){}
         friend points operator+(points,points);
         friend points operator-(points,points);
         void display(){
